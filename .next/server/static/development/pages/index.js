@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -193,7 +193,8 @@ var _static_rocket_json__WEBPACK_IMPORTED_MODULE_5___namespace = /*#__PURE__*/__
 /* harmony import */ var _static_logoRedux_png__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_static_logoRedux_png__WEBPACK_IMPORTED_MODULE_8__);
 /* harmony import */ var _static_logoNode_png__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./static/logoNode.png */ "./pages/static/logoNode.png");
 /* harmony import */ var _static_logoNode_png__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_static_logoNode_png__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _styles__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./styles */ "./pages/styles.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_10__);
 var _jsxFileName = "/Volumes/Samsung_T5/NihonGOJS/Next.js/bootcamp-landing/pages/index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -207,6 +208,58 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
+const Container = styled_components__WEBPACK_IMPORTED_MODULE_10___default.a.div.withConfig({
+  displayName: "pages__Container",
+  componentId: "mytn3e-0"
+})(["margin-top:100px;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;"]);
+const Title = styled_components__WEBPACK_IMPORTED_MODULE_10___default.a.h1.withConfig({
+  displayName: "pages__Title",
+  componentId: "mytn3e-1"
+})(["margin-top:10px;font-size:38px;color:", ";"], ({
+  theme
+}) => theme.colors.primary);
+const Mission = styled_components__WEBPACK_IMPORTED_MODULE_10___default.a.h1.withConfig({
+  displayName: "pages__Mission",
+  componentId: "mytn3e-2"
+})(["margin-top:0px;font-size:44px;font-weight:bold;color:", ";"], ({
+  theme
+}) => theme.colors.text);
+const Explanation = styled_components__WEBPACK_IMPORTED_MODULE_10___default.a.p.withConfig({
+  displayName: "pages__Explanation",
+  componentId: "mytn3e-3"
+})(["font-size:22px;margin-top:-20px;color:", ";"], ({
+  theme
+}) => theme.colors.text);
+const Formulary = styled_components__WEBPACK_IMPORTED_MODULE_10___default.a.div.withConfig({
+  displayName: "pages__Formulary",
+  componentId: "mytn3e-4"
+})(["padding:25px 0px;border-radius:12px;justify-content:center;flex-direction:center;display:flex;"]);
+const Action = styled_components__WEBPACK_IMPORTED_MODULE_10___default.a.div.withConfig({
+  displayName: "pages__Action",
+  componentId: "mytn3e-5"
+})(["margin-top:20px;width:60%;height:auto;border-radius:12px;background-color:rgba(255,255,255,0.1);flex-direction:column;align-items:center;justify-content:center;display:flex;"]);
+const TechContainer = styled_components__WEBPACK_IMPORTED_MODULE_10___default.a.div.withConfig({
+  displayName: "pages__TechContainer",
+  componentId: "mytn3e-6"
+})(["margin:20px;width:60%;height:auto;border-radius:12px;background-color:rgba(255,255,255,0.1);flex-direction:row;align-items:center;justify-content:center;display:flex;"]);
+const Tech = styled_components__WEBPACK_IMPORTED_MODULE_10___default.a.img.withConfig({
+  displayName: "pages__Tech",
+  componentId: "mytn3e-7"
+})(["margin:20px 30px;width:150px;height:auto;border-radius:12px;flex-direction:column;align-items:stretch;justify-content:center;display:flex;"]);
+const Button = styled_components__WEBPACK_IMPORTED_MODULE_10___default.a.button.withConfig({
+  displayName: "pages__Button",
+  componentId: "mytn3e-8"
+})(["font-size:20px;font-weight:500;height:44px;background-color:", ";color:", ";border-width:0px;justify-content:center;align-item:center;"], ({
+  theme
+}) => theme.colors.button, ({
+  theme
+}) => theme.colors.text);
+const Background = styled_components__WEBPACK_IMPORTED_MODULE_10___default.a.div.withConfig({
+  displayName: "pages__Background",
+  componentId: "mytn3e-9"
+})(["background-color:", ";margin:0;padding:0;outline:0;position:absolute;bottom:0px;left:0px;right:0px;top:0px;box-sizing:border-box;-webkit-font-smoothing:antialiased !important;font-family:sans-serif;"], ({
+  theme
+}) => theme.colors.background);
 let animObj = null;
 /* harmony default export */ __webpack_exports__["default"] = (() => {
   const animBox = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(null);
@@ -227,18 +280,18 @@ let animObj = null;
 
     });
   }, []);
-  return __jsx(_styles__WEBPACK_IMPORTED_MODULE_10__["Background"], {
+  return __jsx(Background, {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46,
+      lineNumber: 127,
       columnNumber: 5
     }
-  }, __jsx(_styles__WEBPACK_IMPORTED_MODULE_10__["Container"], {
+  }, __jsx(Container, {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47,
+      lineNumber: 128,
       columnNumber: 7
     }
   }, __jsx("div", {
@@ -250,31 +303,31 @@ let animObj = null;
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48,
+      lineNumber: 129,
       columnNumber: 9
     }
-  }), __jsx(_styles__WEBPACK_IMPORTED_MODULE_10__["Title"], {
+  }), __jsx(Title, {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50,
+      lineNumber: 131,
       columnNumber: 9
     }
-  }, "NihonGoJS"), __jsx(_styles__WEBPACK_IMPORTED_MODULE_10__["Mission"], {
+  }, "NihonGoJS"), __jsx(Mission, {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51,
+      lineNumber: 132,
       columnNumber: 9
     }
-  }, "\u30BD\u30D5\u30C8\u30A6\u30A7\u30A2\u958B\u767A\u30D6\u30C3\u30C8\u30AD\u30E3\u30F3\u30D7"), __jsx(_styles__WEBPACK_IMPORTED_MODULE_10__["Explanation"], {
+  }, "\u30BD\u30D5\u30C8\u30A6\u30A7\u30A2\u958B\u767A\u30D6\u30C3\u30C8\u30AD\u30E3\u30F3\u30D7"), __jsx(Explanation, {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52,
+      lineNumber: 133,
       columnNumber: 9
     }
-  }, "JavaScript\u30D5\u30ED\u30F3\u30C8\u30A8\u30F3\u30C9\u3068\u30D0\u30C3\u30AF\u30A8\u30F3\u30C9\u3092\u5B66\u3093\u3067\u6B21\u306E\u30D9\u30EB\u3078\u884C\u3053\u3046\u3002"), __jsx(_styles__WEBPACK_IMPORTED_MODULE_10__["Action"], {
+  }, "JavaScript\u30D5\u30ED\u30F3\u30C8\u30A8\u30F3\u30C9\u3068\u30D0\u30C3\u30AF\u30A8\u30F3\u30C9\u3092\u5B66\u3093\u3067\u6B21\u306E\u30D9\u30EB\u3078\u884C\u3053\u3046\u3002"), __jsx(Action, {
     onMouseEnter: () => {
       lottie_web__WEBPACK_IMPORTED_MODULE_2___default.a.unfreeze();
       animObj.play();
@@ -283,7 +336,7 @@ let animObj = null;
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55,
+      lineNumber: 136,
       columnNumber: 9
     }
   }, __jsx(_unform_web__WEBPACK_IMPORTED_MODULE_3__["Form"], {
@@ -291,14 +344,14 @@ let animObj = null;
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62,
+      lineNumber: 143,
       columnNumber: 11
     }
-  }, __jsx(_styles__WEBPACK_IMPORTED_MODULE_10__["Formulary"], {
+  }, __jsx(Formulary, {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63,
+      lineNumber: 144,
       columnNumber: 13
     }
   }, __jsx(_components_Input__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -308,7 +361,7 @@ let animObj = null;
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 64,
+      lineNumber: 145,
       columnNumber: 15
     }
   }), __jsx(_components_Input__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -318,10 +371,10 @@ let animObj = null;
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66,
+      lineNumber: 147,
       columnNumber: 15
     }
-  }), __jsx(_styles__WEBPACK_IMPORTED_MODULE_10__["Button"], {
+  }), __jsx(Button, {
     onMouseEnter: () => {
       lottie_web__WEBPACK_IMPORTED_MODULE_2___default.a.unfreeze();
       animObj.play();
@@ -334,10 +387,10 @@ let animObj = null;
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 67,
+      lineNumber: 148,
       columnNumber: 15
     }
-  }, "\u30D6\u30C3\u30C8\u30AD\u30E3\u30F3\u30D7\u306B\u767B\u9332\u3059\u308B")))), __jsx(_styles__WEBPACK_IMPORTED_MODULE_10__["TechContainer"], {
+  }, "\u30D6\u30C3\u30C8\u30AD\u30E3\u30F3\u30D7\u306B\u767B\u9332\u3059\u308B")))), __jsx(TechContainer, {
     onMouseEnter: () => {
       lottie_web__WEBPACK_IMPORTED_MODULE_2___default.a.unfreeze();
       animObj.play();
@@ -346,39 +399,39 @@ let animObj = null;
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 83,
+      lineNumber: 164,
       columnNumber: 9
     }
-  }, __jsx(_styles__WEBPACK_IMPORTED_MODULE_10__["Tech"], {
+  }, __jsx(Tech, {
     src: _static_logoJS_png__WEBPACK_IMPORTED_MODULE_6___default.a,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 90,
+      lineNumber: 171,
       columnNumber: 11
     }
-  }), __jsx(_styles__WEBPACK_IMPORTED_MODULE_10__["Tech"], {
+  }), __jsx(Tech, {
     src: _static_logoReact_png__WEBPACK_IMPORTED_MODULE_7___default.a,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 91,
+      lineNumber: 172,
       columnNumber: 11
     }
-  }), __jsx(_styles__WEBPACK_IMPORTED_MODULE_10__["Tech"], {
+  }), __jsx(Tech, {
     src: _static_logoRedux_png__WEBPACK_IMPORTED_MODULE_8___default.a,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 92,
+      lineNumber: 173,
       columnNumber: 11
     }
-  }), __jsx(_styles__WEBPACK_IMPORTED_MODULE_10__["Tech"], {
+  }), __jsx(Tech, {
     src: _static_logoNode_png__WEBPACK_IMPORTED_MODULE_9___default.a,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 93,
+      lineNumber: 174,
       columnNumber: 11
     }
   }))));
@@ -441,84 +494,7 @@ module.exports = JSON.parse("{\"v\":\"5.6.5\",\"fr\":29.9700012207031,\"ip\":0,\
 
 /***/ }),
 
-/***/ "./pages/styles.js":
-/*!*************************!*\
-  !*** ./pages/styles.js ***!
-  \*************************/
-/*! exports provided: Container, Title, Mission, Explanation, Formulary, Action, TechContainer, Tech, Button, Background */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Container", function() { return Container; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Title", function() { return Title; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Mission", function() { return Mission; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Explanation", function() { return Explanation; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Formulary", function() { return Formulary; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Action", function() { return Action; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TechContainer", function() { return TechContainer; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Tech", function() { return Tech; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Button", function() { return Button; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Background", function() { return Background; });
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "styled-components");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
-
-const Container = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
-  displayName: "styles__Container",
-  componentId: "xfe8vz-0"
-})(["margin-top:100px;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;"]);
-const Title = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.h1.withConfig({
-  displayName: "styles__Title",
-  componentId: "xfe8vz-1"
-})(["margin-top:10px;font-size:38px;color:", ";"], ({
-  theme
-}) => theme.colors.primary);
-const Mission = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.h1.withConfig({
-  displayName: "styles__Mission",
-  componentId: "xfe8vz-2"
-})(["margin-top:0px;font-size:44px;font-weight:bold;color:", ";"], ({
-  theme
-}) => theme.colors.text);
-const Explanation = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.p.withConfig({
-  displayName: "styles__Explanation",
-  componentId: "xfe8vz-3"
-})(["font-size:22px;margin-top:-20px;color:", ";"], ({
-  theme
-}) => theme.colors.text);
-const Formulary = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
-  displayName: "styles__Formulary",
-  componentId: "xfe8vz-4"
-})(["padding:25px 0px;border-radius:12px;justify-content:center;flex-direction:center;display:flex;"]);
-const Action = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
-  displayName: "styles__Action",
-  componentId: "xfe8vz-5"
-})(["margin-top:20px;width:60%;height:auto;border-radius:12px;background-color:rgba(255,255,255,0.1);flex-direction:column;align-items:center;justify-content:center;display:flex;"]);
-const TechContainer = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
-  displayName: "styles__TechContainer",
-  componentId: "xfe8vz-6"
-})(["margin:20px;width:60%;height:auto;border-radius:12px;background-color:rgba(255,255,255,0.1);flex-direction:row;align-items:center;justify-content:center;display:flex;"]);
-const Tech = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.img.withConfig({
-  displayName: "styles__Tech",
-  componentId: "xfe8vz-7"
-})(["margin:20px 30px;width:150px;height:auto;border-radius:12px;flex-direction:column;align-items:stretch;justify-content:center;display:flex;"]);
-const Button = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.button.withConfig({
-  displayName: "styles__Button",
-  componentId: "xfe8vz-8"
-})(["font-size:20px;font-weight:500;height:44px;background-color:", ";color:", ";border-width:0px;justify-content:center;align-item:center;"], ({
-  theme
-}) => theme.colors.button, ({
-  theme
-}) => theme.colors.text);
-const Background = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
-  displayName: "styles__Background",
-  componentId: "xfe8vz-9"
-})(["background-color:", ";margin:0;padding:0;outline:0;position:absolute;bottom:0px;left:0px;right:0px;top:0px;box-sizing:border-box;-webkit-font-smoothing:antialiased !important;font-family:sans-serif;"], ({
-  theme
-}) => theme.colors.background);
-
-/***/ }),
-
-/***/ 3:
+/***/ 4:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/
