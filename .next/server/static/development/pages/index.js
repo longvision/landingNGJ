@@ -93,10 +93,10 @@ module.exports =
 /************************************************************************/
 /******/ ({
 
-/***/ "./pages/components/Input.js":
-/*!***********************************!*\
-  !*** ./pages/components/Input.js ***!
-  \***********************************/
+/***/ "./components/input.js":
+/*!*****************************!*\
+  !*** ./components/input.js ***!
+  \*****************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -109,7 +109,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _unform_core__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_unform_core__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "styled-components");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "/Volumes/Samsung_T5/NihonGOJS/Next.js/bootcamp-landing/pages/components/Input.js";
+var _jsxFileName = "/Volumes/Samsung_T5/NihonGOJS/Next.js/bootcamp-landing/components/input.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
@@ -121,13 +121,10 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 
 
 
-const InputField = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.input`
-  font-size: 18px;
-  height: 40px;
-  background-color: #fff;
-  border-width: 1px;
-  width: 250px;
-`;
+const InputField = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.input.withConfig({
+  displayName: "input__InputField",
+  componentId: "men1dl-0"
+})(["font-size:18px;height:40px;background-color:#fff;border-width:1px;width:250px;"]);
 function Input(_ref) {
   let {
     name,
@@ -182,7 +179,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var lottie_web__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(lottie_web__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _unform_web__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @unform/web */ "@unform/web");
 /* harmony import */ var _unform_web__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_unform_web__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _components_Input__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/Input */ "./pages/components/Input.js");
+/* harmony import */ var _components_input__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./../components/input */ "./components/input.js");
 /* harmony import */ var _static_rocket_json__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./static/rocket.json */ "./pages/static/rocket.json");
 var _static_rocket_json__WEBPACK_IMPORTED_MODULE_5___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./static/rocket.json */ "./pages/static/rocket.json", 1);
 /* harmony import */ var _static_logoJS_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./static/logoJS.png */ "./pages/static/logoJS.png");
@@ -193,8 +190,10 @@ var _static_rocket_json__WEBPACK_IMPORTED_MODULE_5___namespace = /*#__PURE__*/__
 /* harmony import */ var _static_logoRedux_png__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_static_logoRedux_png__WEBPACK_IMPORTED_MODULE_8__);
 /* harmony import */ var _static_logoNode_png__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./static/logoNode.png */ "./pages/static/logoNode.png");
 /* harmony import */ var _static_logoNode_png__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_static_logoNode_png__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! styled-components */ "styled-components");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! next/head */ "next/head");
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_11__);
 var _jsxFileName = "/Volumes/Samsung_T5/NihonGOJS/Next.js/bootcamp-landing/pages/index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -208,45 +207,46 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
-const Container = styled_components__WEBPACK_IMPORTED_MODULE_10___default.a.div.withConfig({
+
+const Container = styled_components__WEBPACK_IMPORTED_MODULE_11___default.a.div.withConfig({
   displayName: "pages__Container",
   componentId: "mytn3e-0"
 })(["margin-top:100px;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;"]);
-const Title = styled_components__WEBPACK_IMPORTED_MODULE_10___default.a.h1.withConfig({
+const Title = styled_components__WEBPACK_IMPORTED_MODULE_11___default.a.h1.withConfig({
   displayName: "pages__Title",
   componentId: "mytn3e-1"
 })(["margin-top:10px;font-size:38px;color:", ";"], ({
   theme
 }) => theme.colors.primary);
-const Mission = styled_components__WEBPACK_IMPORTED_MODULE_10___default.a.h1.withConfig({
+const Mission = styled_components__WEBPACK_IMPORTED_MODULE_11___default.a.h1.withConfig({
   displayName: "pages__Mission",
   componentId: "mytn3e-2"
 })(["margin-top:0px;font-size:44px;font-weight:bold;color:", ";"], ({
   theme
 }) => theme.colors.text);
-const Explanation = styled_components__WEBPACK_IMPORTED_MODULE_10___default.a.p.withConfig({
+const Explanation = styled_components__WEBPACK_IMPORTED_MODULE_11___default.a.p.withConfig({
   displayName: "pages__Explanation",
   componentId: "mytn3e-3"
 })(["font-size:22px;margin-top:-20px;color:", ";"], ({
   theme
 }) => theme.colors.text);
-const Formulary = styled_components__WEBPACK_IMPORTED_MODULE_10___default.a.div.withConfig({
+const Formulary = styled_components__WEBPACK_IMPORTED_MODULE_11___default.a.div.withConfig({
   displayName: "pages__Formulary",
   componentId: "mytn3e-4"
 })(["padding:25px 0px;border-radius:12px;justify-content:center;flex-direction:center;display:flex;"]);
-const Action = styled_components__WEBPACK_IMPORTED_MODULE_10___default.a.div.withConfig({
+const Action = styled_components__WEBPACK_IMPORTED_MODULE_11___default.a.div.withConfig({
   displayName: "pages__Action",
   componentId: "mytn3e-5"
 })(["margin-top:20px;width:60%;height:auto;border-radius:12px;background-color:rgba(255,255,255,0.1);flex-direction:column;align-items:center;justify-content:center;display:flex;"]);
-const TechContainer = styled_components__WEBPACK_IMPORTED_MODULE_10___default.a.div.withConfig({
+const TechContainer = styled_components__WEBPACK_IMPORTED_MODULE_11___default.a.div.withConfig({
   displayName: "pages__TechContainer",
   componentId: "mytn3e-6"
 })(["margin:20px;width:60%;height:auto;border-radius:12px;background-color:rgba(255,255,255,0.1);flex-direction:row;align-items:center;justify-content:center;display:flex;"]);
-const Tech = styled_components__WEBPACK_IMPORTED_MODULE_10___default.a.img.withConfig({
+const Tech = styled_components__WEBPACK_IMPORTED_MODULE_11___default.a.img.withConfig({
   displayName: "pages__Tech",
   componentId: "mytn3e-7"
 })(["margin:20px 30px;width:150px;height:auto;border-radius:12px;flex-direction:column;align-items:stretch;justify-content:center;display:flex;"]);
-const Button = styled_components__WEBPACK_IMPORTED_MODULE_10___default.a.button.withConfig({
+const Button = styled_components__WEBPACK_IMPORTED_MODULE_11___default.a.button.withConfig({
   displayName: "pages__Button",
   componentId: "mytn3e-8"
 })(["font-size:20px;font-weight:500;height:44px;background-color:", ";color:", ";border-width:0px;justify-content:center;align-item:center;"], ({
@@ -254,7 +254,7 @@ const Button = styled_components__WEBPACK_IMPORTED_MODULE_10___default.a.button.
 }) => theme.colors.button, ({
   theme
 }) => theme.colors.text);
-const Background = styled_components__WEBPACK_IMPORTED_MODULE_10___default.a.div.withConfig({
+const Background = styled_components__WEBPACK_IMPORTED_MODULE_11___default.a.div.withConfig({
   displayName: "pages__Background",
   componentId: "mytn3e-9"
 })(["background-color:", ";margin:0;padding:0;outline:0;position:absolute;bottom:0px;left:0px;right:0px;top:0px;box-sizing:border-box;-webkit-font-smoothing:antialiased !important;font-family:sans-serif;"], ({
@@ -287,11 +287,25 @@ let animObj = null;
       lineNumber: 127,
       columnNumber: 5
     }
-  }, __jsx(Container, {
+  }, __jsx(next_head__WEBPACK_IMPORTED_MODULE_10___default.a, {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 128,
+      columnNumber: 7
+    }
+  }, __jsx("title", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 129,
+      columnNumber: 9
+    }
+  }, "Nihongo Javascript Bootcamp")), __jsx(Container, {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 131,
       columnNumber: 7
     }
   }, __jsx("div", {
@@ -303,28 +317,28 @@ let animObj = null;
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 129,
+      lineNumber: 132,
       columnNumber: 9
     }
   }), __jsx(Title, {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 131,
+      lineNumber: 134,
       columnNumber: 9
     }
   }, "NihonGoJS"), __jsx(Mission, {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 132,
+      lineNumber: 135,
       columnNumber: 9
     }
   }, "\u30BD\u30D5\u30C8\u30A6\u30A7\u30A2\u958B\u767A\u30D6\u30C3\u30C8\u30AD\u30E3\u30F3\u30D7"), __jsx(Explanation, {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 133,
+      lineNumber: 136,
       columnNumber: 9
     }
   }, "JavaScript\u30D5\u30ED\u30F3\u30C8\u30A8\u30F3\u30C9\u3068\u30D0\u30C3\u30AF\u30A8\u30F3\u30C9\u3092\u5B66\u3093\u3067\u6B21\u306E\u30D9\u30EB\u3078\u884C\u3053\u3046\u3002"), __jsx(Action, {
@@ -336,7 +350,7 @@ let animObj = null;
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 136,
+      lineNumber: 139,
       columnNumber: 9
     }
   }, __jsx(_unform_web__WEBPACK_IMPORTED_MODULE_3__["Form"], {
@@ -344,34 +358,34 @@ let animObj = null;
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 143,
+      lineNumber: 146,
       columnNumber: 11
     }
   }, __jsx(Formulary, {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 144,
+      lineNumber: 147,
       columnNumber: 13
     }
-  }, __jsx(_components_Input__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  }, __jsx(_components_input__WEBPACK_IMPORTED_MODULE_4__["default"], {
     name: "email",
     type: "email",
     placeholder: "\u30E1\u30FC\u30EB\u30A2\u30C9\u30EC\u30B9",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 145,
+      lineNumber: 148,
       columnNumber: 15
     }
-  }), __jsx(_components_Input__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  }), __jsx(_components_input__WEBPACK_IMPORTED_MODULE_4__["default"], {
     name: "name",
     type: "input",
     placeholder: "\u540D\u524D",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 147,
+      lineNumber: 150,
       columnNumber: 15
     }
   }), __jsx(Button, {
@@ -387,7 +401,7 @@ let animObj = null;
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 148,
+      lineNumber: 151,
       columnNumber: 15
     }
   }, "\u30D6\u30C3\u30C8\u30AD\u30E3\u30F3\u30D7\u306B\u767B\u9332\u3059\u308B")))), __jsx(TechContainer, {
@@ -399,7 +413,7 @@ let animObj = null;
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 164,
+      lineNumber: 167,
       columnNumber: 9
     }
   }, __jsx(Tech, {
@@ -407,7 +421,7 @@ let animObj = null;
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 171,
+      lineNumber: 174,
       columnNumber: 11
     }
   }), __jsx(Tech, {
@@ -415,7 +429,7 @@ let animObj = null;
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 172,
+      lineNumber: 175,
       columnNumber: 11
     }
   }), __jsx(Tech, {
@@ -423,7 +437,7 @@ let animObj = null;
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 173,
+      lineNumber: 176,
       columnNumber: 11
     }
   }), __jsx(Tech, {
@@ -431,7 +445,7 @@ let animObj = null;
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 174,
+      lineNumber: 177,
       columnNumber: 11
     }
   }))));
@@ -547,6 +561,17 @@ module.exports = require("isomorphic-fetch");
 /***/ (function(module, exports) {
 
 module.exports = require("lottie-web");
+
+/***/ }),
+
+/***/ "next/head":
+/*!****************************!*\
+  !*** external "next/head" ***!
+  \****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("next/head");
 
 /***/ }),
 

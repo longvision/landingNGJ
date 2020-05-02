@@ -2,13 +2,13 @@ import React, { useState, useEffect, useRef } from "react";
 import "isomorphic-fetch";
 import lottie from "lottie-web";
 import { Form } from "@unform/web";
-import Input from "./components/Input";
+import Input from "./../components/input";
 import animationData from "./static/rocket.json";
 import logoJS from "./static/logoJS.png";
 import logoReact from "./static/logoReact.png";
 import logoRedux from "./static/logoRedux.png";
 import logoNode from "./static/logoNode.png";
-
+import Head from "next/head";
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -125,6 +125,9 @@ export default () => {
 
   return (
     <Background>
+      <Head>
+        <title>Nihongo Javascript Bootcamp</title>
+      </Head>
       <Container>
         <div style={{ width: 150, margin: "0 auto" }} ref={animBox}></div>
 
