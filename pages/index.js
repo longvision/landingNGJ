@@ -12,52 +12,72 @@ import Head from "next/head";
 import styled from "styled-components";
 
 const Container = styled.div`
-  margin-top: 100px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  display: flex;
+`;
+const SubContainer1 = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
+`;
+const SubContainer2 = styled.div`
+  margin-top: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 `;
 const Title = styled.h1`
-  margin-top: 10px;
+  margin: 10px;
   font-size: 38px;
+
   color: ${({ theme }) => theme.colors.primary};
 `;
 const Mission = styled.h1`
+  margin: 10px;
   margin-top: 0px;
   font-size: 44px;
+  text-align: center;
   font-weight: bold;
   color: ${({ theme }) => theme.colors.text};
 `;
 const Explanation = styled.p`
-  font-size: 22px;
-  margin-top: -20px;
+  font-size: 21px;
+  margin: 15px;
+  text-align: center;
+  margin-top: -10px;
   color: ${({ theme }) => theme.colors.text};
 `;
 
 const Formulary = styled.div`
   padding: 25px 0px;
-
   border-radius: 12px;
   justify-content: center;
-  flex-direction: center;
+  align-items: center;
+  flex-direction: row;
   display: flex;
+  flex-wrap: wrap;
 `;
 
 const Action = styled.div`
   margin-top: 20px;
+  padding: 15px;
   width: 60%;
   height: auto;
+  min-width: 150px;
   border-radius: 12px;
   background-color: rgba(255, 255, 255, 0.1);
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   display: flex;
 `;
 const TechContainer = styled.div`
   margin: 20px;
-  width: 60%;
+  max-width: 60%;
   height: auto;
   border-radius: 12px;
   background-color: rgba(255, 255, 255, 0.1);
@@ -65,11 +85,16 @@ const TechContainer = styled.div`
   align-items: center;
   justify-content: center;
   display: flex;
+  flex-wrap: wrap;
 `;
 const Tech = styled.img`
-  margin: 20px 30px;
-  width: 150px;
-  height: auto;
+  margin: 30px 30px;
+  width: 30%;
+  height: 30%;
+  max-height: 250px;
+  max-width: 250px;
+  min-height: 75px;
+  min-width: 75px;
   border-radius: 12px;
   flex-direction: column;
   align-items: stretch;
@@ -79,30 +104,31 @@ const Tech = styled.img`
 
 const Button = styled.button`
   font-size: 20px;
+  margin-top: 20px;
   font-weight: 500;
-  height: 44px;
+  min-height: 44px;
+  height: auto;
+  width: 80%;
   background-color: ${({ theme }) => theme.colors.button};
   color: ${({ theme }) => theme.colors.text};
-  border-width: 0px;
+  border-radius: 7px;
   justify-content: center;
-  align-item: center;
+  align-item: flex-end;
 `;
 
-const Background = styled.div`
-  background-color: ${({ theme }) => theme.colors.background};
-  margin: 0;
-  padding: 0;
-  outline: 0;
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-  top: 0px;
-  box-sizing: border-box;
-  /* text-rendering: optimizeLegibility !important; */
-  -webkit-font-smoothing: antialiased !important;
-  font-family: sans-serif;
-`;
+// const Background = styled.div`
+//   background-color: ${({ theme }) => theme.colors.background};
+//   position: absolute;
+
+//   left: 0;
+//   top: 0;
+
+//   right: 0;
+//   box-sizing: border-box;
+//   /* text-rendering: optimizeLegibility !important; */
+//   -webkit-font-smoothing: antialiased !important;
+//   font-family: sans-serif;
+// `;
 
 let animObj = null;
 
@@ -124,59 +150,77 @@ export default () => {
   }, []);
 
   return (
-    <Background>
+    <>
       <Head>
         <title>Nihongo Javascript Bootcamp</title>
+        <style>{`body { background-color: #402b52  }`}</style>
       </Head>
       <Container>
-        <div style={{ width: 150, margin: "0 auto" }} ref={animBox}></div>
+        <SubContainer1>
+          <div
+            style={{ width: 250, marginTop: 15, margin: "0 auto" }}
+            ref={animBox}
+          ></div>
 
-        <Title>NihonGoJS</Title>
-        <Mission>ソフトウェア開発ブットキャンプ</Mission>
-        <Explanation>
-          JavaScriptフロントエンドとバックエンドを学んで次のベルへ行こう。
-        </Explanation>
-        <Action
-          onMouseEnter={() => {
-            lottie.unfreeze();
-            animObj.play();
-          }}
-          onMouseLeave={() => lottie.freeze()}
-        >
-          <Form onSubmit={handleSubmit}>
-            <Formulary>
-              <Input name="email" type="email" placeholder="メールアドレス" />
+          <Title>NihonGoJS</Title>
+          <Mission>ソフトウェア開発ブットキャンプ</Mission>
+          <Explanation>
+            JavaScriptフロントエンドとバックエンドを学んで次のベルへ行こう。
+          </Explanation>
+          <Action
+            onMouseEnter={() => {
+              lottie.unfreeze();
+              animObj.play();
+            }}
+            onMouseLeave={() => lottie.freeze()}
+          >
+            <Form onSubmit={handleSubmit}>
+              <Formulary>
+                <Input
+                  name="email"
+                  type="email"
+                  label="メールアドレス"
+                  placeholder="メールアドレス"
+                />
 
-              <Input name="name" type="input" placeholder="名前" />
-              <Button
-                onMouseEnter={() => {
-                  lottie.unfreeze();
-                  animObj.play();
-                  animObj.setSpeed(3);
-                }}
-                onMouseLeave={() => {
-                  animObj.setSpeed(1);
-                }}
-                type="submit"
-              >
-                ブットキャンプに登録する
-              </Button>
-            </Formulary>
-          </Form>
-        </Action>
-        <TechContainer
-          onMouseEnter={() => {
-            lottie.unfreeze();
-            animObj.play();
-          }}
-          onMouseLeave={() => lottie.freeze()}
-        >
-          <Tech src={logoJS} />
-          <Tech src={logoReact} />
-          <Tech src={logoRedux} />
-          <Tech src={logoNode} />
-        </TechContainer>
+                <Input
+                  name="name"
+                  type="input"
+                  label="名前"
+                  placeholder="名前"
+                />
+                <Button
+                  onMouseEnter={() => {
+                    lottie.unfreeze();
+                    animObj.play();
+                    animObj.setSpeed(3);
+                  }}
+                  onMouseLeave={() => {
+                    animObj.setSpeed(1);
+                  }}
+                  type="submit"
+                >
+                  ブットキャンプに登録する
+                </Button>
+              </Formulary>
+            </Form>
+          </Action>
+        </SubContainer1>
+        <SubContainer2>
+          <TechContainer
+            onMouseEnter={() => {
+              lottie.unfreeze();
+              animObj.play();
+            }}
+            onMouseLeave={() => lottie.freeze()}
+          >
+            <Tech src={logoJS} />
+            <Tech src={logoReact} />
+            <Tech src={logoRedux} />
+            <Tech src={logoNode} />
+          </TechContainer>
+        </SubContainer2>
       </Container>
-    </Background>
+    </>
   );
 };

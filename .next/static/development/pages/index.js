@@ -26,11 +26,16 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
 var InputField = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].input.withConfig({
   displayName: "input__InputField",
   componentId: "men1dl-0"
-})(["font-size:18px;height:40px;background-color:#fff;border-width:1px;width:250px;"]);
+})(["font-size:18px;height:40px;margin-top:10px;background-color:#fff;color:#fff;border-width:1px;border-radius:7px;width:80%;max-width:80%;"]);
+var Label = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].label.withConfig({
+  displayName: "input__Label",
+  componentId: "men1dl-1"
+})(["font-size:14px;margin:10px;color:#fff;width:80%;font-weight:700;"]);
 function Input(_ref) {
   var name = _ref.name,
+      label = _ref.label,
       placeholder = _ref.placeholder,
-      rest = Object(_babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__["default"])(_ref, ["name", "placeholder"]);
+      rest = Object(_babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__["default"])(_ref, ["name", "label", "placeholder"]);
 
   var inputRef = Object(react__WEBPACK_IMPORTED_MODULE_2__["useRef"])(null);
 
@@ -47,7 +52,15 @@ function Input(_ref) {
       path: "value"
     });
   }, [fieldName, registerField]);
-  return __jsx(InputField, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, label && __jsx(Label, {
+    htmlFor: fieldName,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 39,
+      columnNumber: 17
+    }
+  }, label), __jsx(InputField, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
     ref: inputRef,
     placeholder: placeholder,
     defaultValue: defaultValue
@@ -55,10 +68,10 @@ function Input(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26,
-      columnNumber: 5
+      lineNumber: 40,
+      columnNumber: 7
     }
-  }));
+  })));
 }
 
 /***/ }),
@@ -19428,61 +19441,73 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 var Container = styled_components__WEBPACK_IMPORTED_MODULE_11__["default"].div.withConfig({
   displayName: "pages__Container",
   componentId: "mytn3e-0"
-})(["margin-top:100px;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;"]);
+})(["flex-direction:row;align-items:center;justify-content:center;flex-wrap:wrap;display:flex;"]);
+var SubContainer1 = styled_components__WEBPACK_IMPORTED_MODULE_11__["default"].div.withConfig({
+  displayName: "pages__SubContainer1",
+  componentId: "mytn3e-1"
+})(["display:flex;flex-direction:column;align-items:center;justify-content:center;"]);
+var SubContainer2 = styled_components__WEBPACK_IMPORTED_MODULE_11__["default"].div.withConfig({
+  displayName: "pages__SubContainer2",
+  componentId: "mytn3e-2"
+})(["margin-top:110px;display:flex;flex-direction:column;align-items:center;justify-content:center;"]);
 var Title = styled_components__WEBPACK_IMPORTED_MODULE_11__["default"].h1.withConfig({
   displayName: "pages__Title",
-  componentId: "mytn3e-1"
-})(["margin-top:10px;font-size:38px;color:", ";"], function (_ref) {
+  componentId: "mytn3e-3"
+})(["margin:10px;font-size:38px;color:", ";"], function (_ref) {
   var theme = _ref.theme;
   return theme.colors.primary;
 });
 var Mission = styled_components__WEBPACK_IMPORTED_MODULE_11__["default"].h1.withConfig({
   displayName: "pages__Mission",
-  componentId: "mytn3e-2"
-})(["margin-top:0px;font-size:44px;font-weight:bold;color:", ";"], function (_ref2) {
+  componentId: "mytn3e-4"
+})(["margin:10px;margin-top:0px;font-size:44px;text-align:center;font-weight:bold;color:", ";"], function (_ref2) {
   var theme = _ref2.theme;
   return theme.colors.text;
 });
 var Explanation = styled_components__WEBPACK_IMPORTED_MODULE_11__["default"].p.withConfig({
   displayName: "pages__Explanation",
-  componentId: "mytn3e-3"
-})(["font-size:22px;margin-top:-20px;color:", ";"], function (_ref3) {
+  componentId: "mytn3e-5"
+})(["font-size:21px;margin:15px;text-align:center;margin-top:-10px;color:", ";"], function (_ref3) {
   var theme = _ref3.theme;
   return theme.colors.text;
 });
 var Formulary = styled_components__WEBPACK_IMPORTED_MODULE_11__["default"].div.withConfig({
   displayName: "pages__Formulary",
-  componentId: "mytn3e-4"
-})(["padding:25px 0px;border-radius:12px;justify-content:center;flex-direction:center;display:flex;"]);
+  componentId: "mytn3e-6"
+})(["padding:25px 0px;border-radius:12px;justify-content:center;align-items:center;flex-direction:row;display:flex;flex-wrap:wrap;"]);
 var Action = styled_components__WEBPACK_IMPORTED_MODULE_11__["default"].div.withConfig({
   displayName: "pages__Action",
-  componentId: "mytn3e-5"
-})(["margin-top:20px;width:60%;height:auto;border-radius:12px;background-color:rgba(255,255,255,0.1);flex-direction:column;align-items:center;justify-content:center;display:flex;"]);
+  componentId: "mytn3e-7"
+})(["margin-top:20px;padding:15px;width:60%;height:auto;min-width:150px;border-radius:12px;background-color:rgba(255,255,255,0.1);align-items:center;justify-content:center;display:flex;"]);
 var TechContainer = styled_components__WEBPACK_IMPORTED_MODULE_11__["default"].div.withConfig({
   displayName: "pages__TechContainer",
-  componentId: "mytn3e-6"
-})(["margin:20px;width:60%;height:auto;border-radius:12px;background-color:rgba(255,255,255,0.1);flex-direction:row;align-items:center;justify-content:center;display:flex;"]);
+  componentId: "mytn3e-8"
+})(["margin:20px;max-width:60%;height:auto;border-radius:12px;background-color:rgba(255,255,255,0.1);flex-direction:row;align-items:center;justify-content:center;display:flex;flex-wrap:wrap;"]);
 var Tech = styled_components__WEBPACK_IMPORTED_MODULE_11__["default"].img.withConfig({
   displayName: "pages__Tech",
-  componentId: "mytn3e-7"
-})(["margin:20px 30px;width:150px;height:auto;border-radius:12px;flex-direction:column;align-items:stretch;justify-content:center;display:flex;"]);
+  componentId: "mytn3e-9"
+})(["margin:30px 30px;width:30%;height:30%;max-height:250px;max-width:250px;min-height:75px;min-width:75px;border-radius:12px;flex-direction:column;align-items:stretch;justify-content:center;display:flex;"]);
 var Button = styled_components__WEBPACK_IMPORTED_MODULE_11__["default"].button.withConfig({
   displayName: "pages__Button",
-  componentId: "mytn3e-8"
-})(["font-size:20px;font-weight:500;height:44px;background-color:", ";color:", ";border-width:0px;justify-content:center;align-item:center;"], function (_ref4) {
+  componentId: "mytn3e-10"
+})(["font-size:20px;margin-top:20px;font-weight:500;min-height:44px;height:auto;width:80%;background-color:", ";color:", ";border-radius:7px;justify-content:center;align-item:flex-end;"], function (_ref4) {
   var theme = _ref4.theme;
   return theme.colors.button;
 }, function (_ref5) {
   var theme = _ref5.theme;
   return theme.colors.text;
-});
-var Background = styled_components__WEBPACK_IMPORTED_MODULE_11__["default"].div.withConfig({
-  displayName: "pages__Background",
-  componentId: "mytn3e-9"
-})(["background-color:", ";margin:0;padding:0;outline:0;position:absolute;bottom:0px;left:0px;right:0px;top:0px;box-sizing:border-box;-webkit-font-smoothing:antialiased !important;font-family:sans-serif;"], function (_ref6) {
-  var theme = _ref6.theme;
-  return theme.colors.background;
-});
+}); // const Background = styled.div`
+//   background-color: ${({ theme }) => theme.colors.background};
+//   position: absolute;
+//   left: 0;
+//   top: 0;
+//   right: 0;
+//   box-sizing: border-box;
+//   /* text-rendering: optimizeLegibility !important; */
+//   -webkit-font-smoothing: antialiased !important;
+//   font-family: sans-serif;
+// `;
+
 var animObj = null;
 /* harmony default export */ __webpack_exports__["default"] = (function () {
   var animBox = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(null);
@@ -19503,66 +19528,74 @@ var animObj = null;
 
     });
   }, []);
-  return __jsx(Background, {
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(next_head__WEBPACK_IMPORTED_MODULE_10___default.a, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 127,
-      columnNumber: 5
-    }
-  }, __jsx(next_head__WEBPACK_IMPORTED_MODULE_10___default.a, {
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 128,
+      lineNumber: 154,
       columnNumber: 7
     }
   }, __jsx("title", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 129,
+      lineNumber: 155,
       columnNumber: 9
     }
-  }, "Nihongo Javascript Bootcamp")), __jsx(Container, {
+  }, "Nihongo Javascript Bootcamp"), __jsx("style", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 131,
+      lineNumber: 156,
+      columnNumber: 9
+    }
+  }, "body { background-color: #402b52  }")), __jsx(Container, {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 158,
       columnNumber: 7
+    }
+  }, __jsx(SubContainer1, {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 159,
+      columnNumber: 9
     }
   }, __jsx("div", {
     style: {
-      width: 150,
+      width: 250,
+      marginTop: 15,
       margin: "0 auto"
     },
     ref: animBox,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 132,
-      columnNumber: 9
+      lineNumber: 160,
+      columnNumber: 11
     }
   }), __jsx(Title, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 134,
-      columnNumber: 9
+      lineNumber: 165,
+      columnNumber: 11
     }
   }, "NihonGoJS"), __jsx(Mission, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 135,
-      columnNumber: 9
+      lineNumber: 166,
+      columnNumber: 11
     }
   }, "\u30BD\u30D5\u30C8\u30A6\u30A7\u30A2\u958B\u767A\u30D6\u30C3\u30C8\u30AD\u30E3\u30F3\u30D7"), __jsx(Explanation, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 136,
-      columnNumber: 9
+      lineNumber: 167,
+      columnNumber: 11
     }
   }, "JavaScript\u30D5\u30ED\u30F3\u30C8\u30A8\u30F3\u30C9\u3068\u30D0\u30C3\u30AF\u30A8\u30F3\u30C9\u3092\u5B66\u3093\u3067\u6B21\u306E\u30D9\u30EB\u3078\u884C\u3053\u3046\u3002"), __jsx(Action, {
     onMouseEnter: function onMouseEnter() {
@@ -19575,43 +19608,45 @@ var animObj = null;
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 139,
-      columnNumber: 9
+      lineNumber: 170,
+      columnNumber: 11
     }
   }, __jsx(_unform_web__WEBPACK_IMPORTED_MODULE_3__["Form"], {
     onSubmit: handleSubmit,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 146,
-      columnNumber: 11
+      lineNumber: 177,
+      columnNumber: 13
     }
   }, __jsx(Formulary, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 147,
-      columnNumber: 13
+      lineNumber: 178,
+      columnNumber: 15
     }
   }, __jsx(_components_input__WEBPACK_IMPORTED_MODULE_4__["default"], {
     name: "email",
     type: "email",
+    label: "\u30E1\u30FC\u30EB\u30A2\u30C9\u30EC\u30B9",
     placeholder: "\u30E1\u30FC\u30EB\u30A2\u30C9\u30EC\u30B9",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 148,
-      columnNumber: 15
+      lineNumber: 179,
+      columnNumber: 17
     }
   }), __jsx(_components_input__WEBPACK_IMPORTED_MODULE_4__["default"], {
     name: "name",
     type: "input",
+    label: "\u540D\u524D",
     placeholder: "\u540D\u524D",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 150,
-      columnNumber: 15
+      lineNumber: 186,
+      columnNumber: 17
     }
   }), __jsx(Button, {
     onMouseEnter: function onMouseEnter() {
@@ -19626,10 +19661,17 @@ var animObj = null;
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 151,
-      columnNumber: 15
+      lineNumber: 192,
+      columnNumber: 17
     }
-  }, "\u30D6\u30C3\u30C8\u30AD\u30E3\u30F3\u30D7\u306B\u767B\u9332\u3059\u308B")))), __jsx(TechContainer, {
+  }, "\u30D6\u30C3\u30C8\u30AD\u30E3\u30F3\u30D7\u306B\u767B\u9332\u3059\u308B"))))), __jsx(SubContainer2, {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 209,
+      columnNumber: 9
+    }
+  }, __jsx(TechContainer, {
     onMouseEnter: function onMouseEnter() {
       lottie_web__WEBPACK_IMPORTED_MODULE_2___default.a.unfreeze();
       animObj.play();
@@ -19640,42 +19682,42 @@ var animObj = null;
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 167,
-      columnNumber: 9
+      lineNumber: 210,
+      columnNumber: 11
     }
   }, __jsx(Tech, {
     src: _static_logoJS_png__WEBPACK_IMPORTED_MODULE_6___default.a,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 174,
-      columnNumber: 11
+      lineNumber: 217,
+      columnNumber: 13
     }
   }), __jsx(Tech, {
     src: _static_logoReact_png__WEBPACK_IMPORTED_MODULE_7___default.a,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 175,
-      columnNumber: 11
+      lineNumber: 218,
+      columnNumber: 13
     }
   }), __jsx(Tech, {
     src: _static_logoRedux_png__WEBPACK_IMPORTED_MODULE_8___default.a,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 176,
-      columnNumber: 11
+      lineNumber: 219,
+      columnNumber: 13
     }
   }), __jsx(Tech, {
     src: _static_logoNode_png__WEBPACK_IMPORTED_MODULE_9___default.a,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 177,
-      columnNumber: 11
+      lineNumber: 220,
+      columnNumber: 13
     }
-  }))));
+  })))));
 });
 
 /***/ }),

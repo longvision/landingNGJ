@@ -293,6 +293,11 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 
 
+
+const Background = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
+  displayName: "_app__Background",
+  componentId: "sc-1mgs91k-0"
+})(["position:absolute;left:0;top:0;bottom:0;right:0;box-sizing:border-box;-webkit-font-smoothing:antialiased !important;font-family:sans-serif;"]);
 const theme = {
   colors: {
     primary: "#ffea00",
@@ -312,17 +317,24 @@ class MyApp extends next_app__WEBPACK_IMPORTED_MODULE_0___default.a {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 18,
+        lineNumber: 31,
         columnNumber: 7
+      }
+    }, __jsx(Background, {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 32,
+        columnNumber: 9
       }
     }, __jsx(Component, _extends({}, pageProps, {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 19,
-        columnNumber: 9
+        lineNumber: 33,
+        columnNumber: 11
       }
-    })));
+    }))));
   }
 
 }

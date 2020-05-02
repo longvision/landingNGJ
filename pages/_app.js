@@ -1,6 +1,19 @@
 import App from "next/app";
 import React from "react";
 import { ThemeProvider } from "styled-components";
+import styled from "styled-components";
+
+const Background = styled.div`
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  box-sizing: border-box;
+  /* text-rendering: optimizeLegibility !important; */
+  -webkit-font-smoothing: antialiased !important;
+  font-family: sans-serif;
+`;
 
 const theme = {
   colors: {
@@ -16,7 +29,9 @@ export default class MyApp extends App {
     const { Component, pageProps } = this.props;
     return (
       <ThemeProvider theme={theme}>
-        <Component {...pageProps} />
+        <Background>
+          <Component {...pageProps} />
+        </Background>
       </ThemeProvider>
     );
   }
