@@ -112,8 +112,6 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/Volumes/Samsung_T5/NihonGOJS/Next.js/bootcamp-landing/components/input.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
-
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
@@ -132,45 +130,30 @@ const Label = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.label.wit
 function Input(_ref) {
   let {
     name,
+    type,
     label,
     placeholder
   } = _ref,
-      rest = _objectWithoutProperties(_ref, ["name", "label", "placeholder"]);
+      rest = _objectWithoutProperties(_ref, ["name", "type", "label", "placeholder"]);
 
-  const inputRef = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(null);
-  const {
-    fieldName,
-    defaultValue,
-    registerField,
-    error
-  } = Object(_unform_core__WEBPACK_IMPORTED_MODULE_1__["useField"])(name);
-  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
-    registerField({
-      name: fieldName,
-      ref: inputRef.current,
-      path: "value"
-    });
-  }, [fieldName, registerField]);
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, label && __jsx(Label, {
-    htmlFor: fieldName,
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(Label, {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39,
-      columnNumber: 17
-    }
-  }, label), __jsx(InputField, _extends({
-    ref: inputRef,
-    placeholder: placeholder,
-    defaultValue: defaultValue
-  }, rest, {
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 40,
+      lineNumber: 28,
       columnNumber: 7
     }
-  })));
+  }, label), __jsx(InputField, {
+    type: type,
+    name: name,
+    placeholder: placeholder,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 29,
+      columnNumber: 7
+    }
+  }));
 }
 
 /***/ }),
@@ -387,8 +370,17 @@ let animObj = null;
       lineNumber: 170,
       columnNumber: 11
     }
-  }, __jsx(_unform_web__WEBPACK_IMPORTED_MODULE_3__["Form"], {
-    onSubmit: handleSubmit,
+  }, __jsx("form", {
+    onMouseEnter: () => {
+      lottie_web__WEBPACK_IMPORTED_MODULE_2___default.a.unfreeze();
+      animObj.play();
+      animObj.setSpeed(3);
+    },
+    onMouseLeave: () => {
+      animObj.setSpeed(1);
+    },
+    action: "https://api.staticforms.xyz/submit",
+    method: "post",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -399,52 +391,107 @@ let animObj = null;
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 178,
+      lineNumber: 189,
       columnNumber: 15
     }
   }, __jsx(_components_input__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    name: "email",
-    type: "email",
-    label: "\u30E1\u30FC\u30EB\u30A2\u30C9\u30EC\u30B9",
-    placeholder: "\u30E1\u30FC\u30EB\u30A2\u30C9\u30EC\u30B9",
+    type: "text",
+    name: "name",
+    placeholder: "\u540D\u524D",
+    label: "\u540D\u524D",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 179,
+      lineNumber: 190,
       columnNumber: 17
     }
   }), __jsx(_components_input__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    name: "name",
-    type: "input",
-    label: "\u540D\u524D",
-    placeholder: "\u540D\u524D",
+    type: "text",
+    name: "email",
+    placeholder: "\u30E1\u30FC\u30EB\u30A2\u30C9\u30EC\u30B9",
+    label: "\u30E1\u30FC\u30EB\u30A2\u30C9\u30EC\u30B9",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 186,
+      lineNumber: 196,
+      columnNumber: 17
+    }
+  }), __jsx("input", {
+    type: "text",
+    name: "honeypot",
+    style: {
+      display: "none"
+    },
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 202,
+      columnNumber: 17
+    }
+  }), __jsx("input", {
+    type: "hidden",
+    name: "accessKey",
+    value: process.env.FORM,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 207,
+      columnNumber: 17
+    }
+  }), __jsx("input", {
+    type: "hidden",
+    name: "replyTo",
+    value: "@",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 212,
+      columnNumber: 17
+    }
+  }), __jsx("input", {
+    type: "hidden",
+    name: "subject",
+    value: "Contact us from - www.nihongojs.com",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 213,
+      columnNumber: 17
+    }
+  }), __jsx("input", {
+    type: "hidden",
+    name: "replyTo",
+    value: "@",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 218,
+      columnNumber: 17
+    }
+  }), __jsx("input", {
+    type: "hidden",
+    name: "redirectTo",
+    value: "https://www.nihongojs.com",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 219,
       columnNumber: 17
     }
   }), __jsx(Button, {
-    onMouseEnter: () => {
-      lottie_web__WEBPACK_IMPORTED_MODULE_2___default.a.unfreeze();
-      animObj.play();
-      animObj.setSpeed(3);
-    },
-    onMouseLeave: () => {
-      animObj.setSpeed(1);
-    },
     type: "submit",
+    value: "Submit",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 192,
+      lineNumber: 224,
       columnNumber: 17
     }
-  }, "\u30D6\u30C3\u30C8\u30AD\u30E3\u30F3\u30D7\u306B\u767B\u9332\u3059\u308B"))))), __jsx(SubContainer2, {
+  }, "\u30D6\u30C3\u30C8\u30AD\u30E3\u30F3\u30D7\u306B\u767B\u9332\u3059\u308B\u3002"))))), __jsx(SubContainer2, {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 209,
+      lineNumber: 231,
       columnNumber: 9
     }
   }, __jsx(TechContainer, {
@@ -456,7 +503,7 @@ let animObj = null;
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 210,
+      lineNumber: 232,
       columnNumber: 11
     }
   }, __jsx(Tech, {
@@ -464,7 +511,7 @@ let animObj = null;
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 217,
+      lineNumber: 239,
       columnNumber: 13
     }
   }), __jsx(Tech, {
@@ -472,7 +519,7 @@ let animObj = null;
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 218,
+      lineNumber: 240,
       columnNumber: 13
     }
   }), __jsx(Tech, {
@@ -480,7 +527,7 @@ let animObj = null;
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 219,
+      lineNumber: 241,
       columnNumber: 13
     }
   }), __jsx(Tech, {
@@ -488,7 +535,7 @@ let animObj = null;
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 220,
+      lineNumber: 242,
       columnNumber: 13
     }
   })))));

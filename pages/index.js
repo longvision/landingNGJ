@@ -174,36 +174,58 @@ export default () => {
             }}
             onMouseLeave={() => lottie.freeze()}
           >
-            <Form onSubmit={handleSubmit}>
+            <form
+              onMouseEnter={() => {
+                lottie.unfreeze();
+                animObj.play();
+                animObj.setSpeed(3);
+              }}
+              onMouseLeave={() => {
+                animObj.setSpeed(1);
+              }}
+              action="https://api.staticforms.xyz/submit"
+              method="post"
+            >
               <Formulary>
                 <Input
-                  name="email"
-                  type="email"
-                  label="メールアドレス"
-                  placeholder="メールアドレス"
-                />
-
-                <Input
+                  type="text"
                   name="name"
-                  type="input"
-                  label="名前"
                   placeholder="名前"
+                  label="名前"
                 />
-                <Button
-                  onMouseEnter={() => {
-                    lottie.unfreeze();
-                    animObj.play();
-                    animObj.setSpeed(3);
-                  }}
-                  onMouseLeave={() => {
-                    animObj.setSpeed(1);
-                  }}
-                  type="submit"
-                >
-                  ブットキャンプに登録する
+                <Input
+                  type="text"
+                  name="email"
+                  placeholder="メールアドレス"
+                  label="メールアドレス"
+                />
+                <input
+                  type="text"
+                  name="honeypot"
+                  style={{ display: "none" }}
+                />
+                <input
+                  type="hidden"
+                  name="accessKey"
+                  value={process.env.FORM}
+                />
+                <input type="hidden" name="replyTo" value="@"></input>
+                <input
+                  type="hidden"
+                  name="subject"
+                  value="Contact us from - www.nihongojs.com"
+                />
+                <input type="hidden" name="replyTo" value="@"></input>
+                <input
+                  type="hidden"
+                  name="redirectTo"
+                  value="https://www.nihongojs.com"
+                ></input>
+                <Button type="submit" value="Submit">
+                  ブットキャンプに登録する。
                 </Button>
               </Formulary>
-            </Form>
+            </form>
           </Action>
         </SubContainer1>
         <SubContainer2>

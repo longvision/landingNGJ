@@ -22,27 +22,11 @@ const Label = styled.label`
   font-weight: 700;
 `;
 
-export default function Input({ name, label, placeholder, ...rest }) {
-  const inputRef = useRef(null);
-  const { fieldName, defaultValue, registerField, error } = useField(name);
-
-  useEffect(() => {
-    registerField({
-      name: fieldName,
-      ref: inputRef.current,
-      path: "value",
-    });
-  }, [fieldName, registerField]);
-
+export default function Input({ name, type, label, placeholder, ...rest }) {
   return (
     <>
-      {label && <Label htmlFor={fieldName}>{label}</Label>}
-      <InputField
-        ref={inputRef}
-        placeholder={placeholder}
-        defaultValue={defaultValue}
-        {...rest}
-      />
+      <Label>{label}</Label>
+      <InputField type={type} name={name} placeholder={placeholder} />
     </>
   );
 }

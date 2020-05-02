@@ -10,68 +10,50 @@
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Input; });
-/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
-/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutProperties */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _unform_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @unform/core */ "./node_modules/@unform/core/dist/index.es.js");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
-
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutProperties */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _unform_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @unform/core */ "./node_modules/@unform/core/dist/index.es.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 
 var _jsxFileName = "/Volumes/Samsung_T5/NihonGOJS/Next.js/bootcamp-landing/components/input.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
+var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
 
-var InputField = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].input.withConfig({
+var InputField = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].input.withConfig({
   displayName: "input__InputField",
   componentId: "men1dl-0"
 })(["font-size:18px;height:40px;margin-top:10px;background-color:#fff;color:#fff;border-width:1px;border-radius:7px;width:80%;max-width:80%;"]);
-var Label = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].label.withConfig({
+var Label = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].label.withConfig({
   displayName: "input__Label",
   componentId: "men1dl-1"
 })(["font-size:14px;margin:10px;color:#fff;width:80%;font-weight:700;"]);
 function Input(_ref) {
   var name = _ref.name,
+      type = _ref.type,
       label = _ref.label,
       placeholder = _ref.placeholder,
-      rest = Object(_babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__["default"])(_ref, ["name", "label", "placeholder"]);
+      rest = Object(_babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_0__["default"])(_ref, ["name", "type", "label", "placeholder"]);
 
-  var inputRef = Object(react__WEBPACK_IMPORTED_MODULE_2__["useRef"])(null);
-
-  var _useField = Object(_unform_core__WEBPACK_IMPORTED_MODULE_3__["useField"])(name),
-      fieldName = _useField.fieldName,
-      defaultValue = _useField.defaultValue,
-      registerField = _useField.registerField,
-      error = _useField.error;
-
-  Object(react__WEBPACK_IMPORTED_MODULE_2__["useEffect"])(function () {
-    registerField({
-      name: fieldName,
-      ref: inputRef.current,
-      path: "value"
-    });
-  }, [fieldName, registerField]);
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, label && __jsx(Label, {
-    htmlFor: fieldName,
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, __jsx(Label, {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39,
-      columnNumber: 17
-    }
-  }, label), __jsx(InputField, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
-    ref: inputRef,
-    placeholder: placeholder,
-    defaultValue: defaultValue
-  }, rest, {
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 40,
+      lineNumber: 28,
       columnNumber: 7
     }
-  })));
+  }, label), __jsx(InputField, {
+    type: type,
+    name: name,
+    placeholder: placeholder,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 29,
+      columnNumber: 7
+    }
+  }));
 }
 
 /***/ }),
@@ -157,36 +139,6 @@ function _createClass(Constructor, protoProps, staticProps) {
 }
 
 module.exports = _createClass;
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/esm/extends.js":
-/*!************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/esm/extends.js ***!
-  \************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _extends; });
-function _extends() {
-  _extends = Object.assign || function (target) {
-    for (var i = 1; i < arguments.length; i++) {
-      var source = arguments[i];
-
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
-    }
-
-    return target;
-  };
-
-  return _extends.apply(this, arguments);
-}
 
 /***/ }),
 
@@ -19401,7 +19353,7 @@ if ( true && typeof window !== 'undefined') {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var isomorphic_fetch__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! isomorphic-fetch */ "./node_modules/isomorphic-fetch/fetch-npm-browserify.js");
 /* harmony import */ var isomorphic_fetch__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(isomorphic_fetch__WEBPACK_IMPORTED_MODULE_1__);
@@ -19611,8 +19563,17 @@ var animObj = null;
       lineNumber: 170,
       columnNumber: 11
     }
-  }, __jsx(_unform_web__WEBPACK_IMPORTED_MODULE_3__["Form"], {
-    onSubmit: handleSubmit,
+  }, __jsx("form", {
+    onMouseEnter: function onMouseEnter() {
+      lottie_web__WEBPACK_IMPORTED_MODULE_2___default.a.unfreeze();
+      animObj.play();
+      animObj.setSpeed(3);
+    },
+    onMouseLeave: function onMouseLeave() {
+      animObj.setSpeed(1);
+    },
+    action: "https://api.staticforms.xyz/submit",
+    method: "post",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
@@ -19623,52 +19584,107 @@ var animObj = null;
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 178,
+      lineNumber: 189,
       columnNumber: 15
     }
   }, __jsx(_components_input__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    name: "email",
-    type: "email",
-    label: "\u30E1\u30FC\u30EB\u30A2\u30C9\u30EC\u30B9",
-    placeholder: "\u30E1\u30FC\u30EB\u30A2\u30C9\u30EC\u30B9",
+    type: "text",
+    name: "name",
+    placeholder: "\u540D\u524D",
+    label: "\u540D\u524D",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 179,
+      lineNumber: 190,
       columnNumber: 17
     }
   }), __jsx(_components_input__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    name: "name",
-    type: "input",
-    label: "\u540D\u524D",
-    placeholder: "\u540D\u524D",
+    type: "text",
+    name: "email",
+    placeholder: "\u30E1\u30FC\u30EB\u30A2\u30C9\u30EC\u30B9",
+    label: "\u30E1\u30FC\u30EB\u30A2\u30C9\u30EC\u30B9",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 186,
+      lineNumber: 196,
+      columnNumber: 17
+    }
+  }), __jsx("input", {
+    type: "text",
+    name: "honeypot",
+    style: {
+      display: "none"
+    },
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 202,
+      columnNumber: 17
+    }
+  }), __jsx("input", {
+    type: "hidden",
+    name: "accessKey",
+    value: process.env.FORM,
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 207,
+      columnNumber: 17
+    }
+  }), __jsx("input", {
+    type: "hidden",
+    name: "replyTo",
+    value: "@",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 212,
+      columnNumber: 17
+    }
+  }), __jsx("input", {
+    type: "hidden",
+    name: "subject",
+    value: "Contact us from - www.nihongojs.com",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 213,
+      columnNumber: 17
+    }
+  }), __jsx("input", {
+    type: "hidden",
+    name: "replyTo",
+    value: "@",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 218,
+      columnNumber: 17
+    }
+  }), __jsx("input", {
+    type: "hidden",
+    name: "redirectTo",
+    value: "https://www.nihongojs.com",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 219,
       columnNumber: 17
     }
   }), __jsx(Button, {
-    onMouseEnter: function onMouseEnter() {
-      lottie_web__WEBPACK_IMPORTED_MODULE_2___default.a.unfreeze();
-      animObj.play();
-      animObj.setSpeed(3);
-    },
-    onMouseLeave: function onMouseLeave() {
-      animObj.setSpeed(1);
-    },
     type: "submit",
+    value: "Submit",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 192,
+      lineNumber: 224,
       columnNumber: 17
     }
-  }, "\u30D6\u30C3\u30C8\u30AD\u30E3\u30F3\u30D7\u306B\u767B\u9332\u3059\u308B"))))), __jsx(SubContainer2, {
+  }, "\u30D6\u30C3\u30C8\u30AD\u30E3\u30F3\u30D7\u306B\u767B\u9332\u3059\u308B\u3002"))))), __jsx(SubContainer2, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 209,
+      lineNumber: 231,
       columnNumber: 9
     }
   }, __jsx(TechContainer, {
@@ -19682,7 +19698,7 @@ var animObj = null;
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 210,
+      lineNumber: 232,
       columnNumber: 11
     }
   }, __jsx(Tech, {
@@ -19690,7 +19706,7 @@ var animObj = null;
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 217,
+      lineNumber: 239,
       columnNumber: 13
     }
   }), __jsx(Tech, {
@@ -19698,7 +19714,7 @@ var animObj = null;
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 218,
+      lineNumber: 240,
       columnNumber: 13
     }
   }), __jsx(Tech, {
@@ -19706,7 +19722,7 @@ var animObj = null;
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 219,
+      lineNumber: 241,
       columnNumber: 13
     }
   }), __jsx(Tech, {
@@ -19714,11 +19730,12 @@ var animObj = null;
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 220,
+      lineNumber: 242,
       columnNumber: 13
     }
   })))));
 });
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../node_modules/process/browser.js */ "./node_modules/process/browser.js")))
 
 /***/ }),
 
