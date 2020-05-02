@@ -24,7 +24,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 var InputField = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].input.withConfig({
   displayName: "input__InputField",
   componentId: "men1dl-0"
-})(["font-size:18px;height:40px;margin-top:10px;background-color:#fff;color:#fff;border-width:1px;border-radius:7px;width:80%;max-width:80%;"]);
+})(["font-size:18px;height:40px;margin-top:10px;background-color:#fff;border-width:1px;border-radius:7px;width:80%;max-width:80%;"]);
 var Label = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].label.withConfig({
   displayName: "input__Label",
   componentId: "men1dl-1"
@@ -40,7 +40,7 @@ function Input(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28,
+      lineNumber: 27,
       columnNumber: 7
     }
   }, label), __jsx(InputField, {
@@ -50,7 +50,7 @@ function Input(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29,
+      lineNumber: 28,
       columnNumber: 7
     }
   }));

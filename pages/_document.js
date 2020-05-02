@@ -1,6 +1,6 @@
-import Document from "next/document";
+require("dotenv").config();
 import { ServerStyleSheet } from "styled-components";
-
+import Document from "next/document";
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
     const sheet = new ServerStyleSheet();
