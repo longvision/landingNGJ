@@ -25,7 +25,7 @@ const SubContainer1 = styled.div`
   justify-content: center;
 `;
 const SubContainer2 = styled.div`
-  margin-top: 110px;
+  margin-top: 111px;
   display: flex;
   flex-direction: column;
   align-items: center;
