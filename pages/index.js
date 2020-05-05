@@ -222,7 +222,7 @@ export default () => {
                   value="https://www.nihongojs.com"
                 ></input>
                 <Button type="submit" value="Submit">
-                  ブットキャンプに登録する。
+                  ブットキャンプに仮登録する。
                 </Button>
               </Formulary>
             </form>
