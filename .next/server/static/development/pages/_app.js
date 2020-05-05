@@ -303,7 +303,9 @@ const theme = {
     primary: "#ffea00",
     text: " #fff",
     background: "#402b52",
-    button: "#3898ec"
+    button: "#3898ec",
+    success: "#5CD26C",
+    successText: "#dd84d1"
   }
 };
 class MyApp extends next_app__WEBPACK_IMPORTED_MODULE_0___default.a {
@@ -317,21 +319,21 @@ class MyApp extends next_app__WEBPACK_IMPORTED_MODULE_0___default.a {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 31,
+        lineNumber: 33,
         columnNumber: 7
       }
     }, __jsx(Background, {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 32,
+        lineNumber: 34,
         columnNumber: 9
       }
     }, __jsx(Component, _extends({}, pageProps, {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 33,
+        lineNumber: 35,
         columnNumber: 11
       }
     }))));

@@ -6823,7 +6823,9 @@ var theme = {
     primary: "#ffea00",
     text: " #fff",
     background: "#402b52",
-    button: "#3898ec"
+    button: "#3898ec",
+    success: "#5CD26C",
+    successText: "#dd84d1"
   }
 };
 
@@ -6849,21 +6851,21 @@ var MyApp = /*#__PURE__*/function (_App) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 31,
+          lineNumber: 33,
           columnNumber: 7
         }
       }, __jsx(Background, {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 32,
+          lineNumber: 34,
           columnNumber: 9
         }
       }, __jsx(Component, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, pageProps, {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 33,
+          lineNumber: 35,
           columnNumber: 11
         }
       }))));

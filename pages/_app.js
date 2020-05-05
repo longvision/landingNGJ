@@ -21,6 +21,8 @@ const theme = {
     text: " #fff",
     background: "#402b52",
     button: "#3898ec",
+    success: "#5CD26C",
+    successText: "#dd84d1",
   },
 };
 

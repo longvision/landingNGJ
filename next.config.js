@@ -9,5 +9,6 @@ module.exports = withImages({
   },
   env: {
     FORM: process.env.FORM,
+    ADDRESS: process.env.ADDRESS,
   },
 });

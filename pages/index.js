@@ -1,15 +1,15 @@
 import React, { useState, useEffect, useRef } from "react";
+import { useRouter } from "next/router";
+import Head from "next/head";
+import styled from "styled-components";
 import "isomorphic-fetch";
 import lottie from "lottie-web";
-import { Form } from "@unform/web";
 import Input from "./../components/input";
 import animationData from "./static/rocket.json";
 import logoJS from "./static/logoJS.png";
 import logoReact from "./static/logoReact.png";
 import logoRedux from "./static/logoRedux.png";
 import logoNode from "./static/logoNode.png";
-import Head from "next/head";
-import styled from "styled-components";
 
 const Container = styled.div`
   flex-direction: row;
@@ -48,9 +48,29 @@ const Mission = styled.h1`
 const Explanation = styled.p`
   font-size: 21px;
   margin: 15px;
+  margin-left: 44px;
+  margin-right: 44px;
   text-align: center;
   margin-top: -10px;
   color: ${({ theme }) => theme.colors.text};
+`;
+const Subtext = styled.p`
+  font-size: 15px;
+  font-weight: 500;
+  margin: 15px;
+  text-align: center;
+  margin-top: -10px;
+  color: ${({ theme }) => theme.colors.text};
+`;
+const Modal = styled.p`
+  font-size: 17px;
+  font-weight: 400;
+  margin-top: 25px;
+  background-color: ${({ theme }) => theme.colors.success};
+  color: ${({ theme }) => theme.colors.background};
+  padding: 15px;
+  text-align: center;
+  border-radius: 7px;
 `;
 
 const Formulary = styled.div`
@@ -133,11 +153,12 @@ const Button = styled.button`
 let animObj = null;
 
 export default () => {
+  const [modal, setModal] = useState(false);
+  const router = useRouter();
   const animBox = useRef(null);
   function handleSubmit(data) {
     console.log(data);
   }
-
   useEffect(() => {
     console.log(" component did mount ");
     animObj = lottie.loadAnimation({
@@ -149,10 +170,18 @@ export default () => {
     });
   }, []);
 
+  const handleClick = (e) => {
+    e.preventDefault();
+    setModal(true);
+    setTimeout(() => {
+      setModal(false);
+    }, 3000);
+  };
+
   return (
     <>
       <Head>
-        <title>Nihongo Javascript Bootcamp</title>
+        <title>Nihon Go Javascript Bootcamp</title>
         <style>{`body { background-color: #402b52  }`}</style>
       </Head>
       <Container>
@@ -165,7 +194,7 @@ export default () => {
           <Title>NihonGoJS</Title>
           <Mission>ソフトウェア開発ブットキャンプ</Mission>
           <Explanation>
-            JavaScriptフロントエンドとバックエンドを学んで次のベルへ行こう。
+            JavaScriptフロントエンドとバックエンドを学んで次のレベルへ行こう。
           </Explanation>
           <Action
             onMouseEnter={() => {
@@ -213,21 +242,22 @@ export default () => {
                 <input
                   type="hidden"
                   name="subject"
-                  value="Contact us from - www.nihongojs.com"
+                  value="Contact received from - https://bootcamp.nihongojs.com"
                 />
                 <input type="hidden" name="replyTo" value="@"></input>
-                <input
-                  type="hidden"
-                  name="redirectTo"
-                  value="https://www.nihongojs.com"
-                ></input>
-                <Button type="submit" value="Submit">
-                  ブットキャンプに仮登録する。
+
+                <Button type="submit" value="Submit" onClick={handleClick}>
+                  ブットキャンプの次のステージに。
                 </Button>
               </Formulary>
+              <Subtext>
+                時間を無駄にしない君に作られた新技術のトレーニング。
+              </Subtext>
+              {modal && <Modal>登録してありがとうございます。</Modal>}
             </form>
           </Action>
         </SubContainer1>
+
         <SubContainer2>
           <TechContainer
             onMouseEnter={() => {
